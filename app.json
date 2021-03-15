@@ -1,0 +1,12 @@
+{
+  "name": "pandar",
+  "displayName": "pandar",
+  "expo": {
+    "name": "pandar",
+    "slug": "pandar",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  }
+}

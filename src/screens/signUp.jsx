@@ -1,13 +1,13 @@
 import React from 'react'
 import { View, Text } from 'react-native';
-import signUpComponent from "../components/signUp/signUp"
+import SignUp from "../components/signUp/signUp";
 
-const signUp = ({ navigation }) => {
+const SignUpScreen = ({ navigation }) => {
     return (
         <View>
-            <signUpComponent navigation={navigation} />
+           <SignUp navigation={navigation} /> 
         </View>
     )
 }
 
-export default signUp
+export default SignUpScreen

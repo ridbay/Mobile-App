@@ -39,8 +39,8 @@ const signIn = ({ navigation }) => {
         </Form>
       </Content>
       <Button
-        title="Go to Sign Up page"
-        onPress={() => navigation.navigate("SignUp")}
+        title="Go to User Home Page"
+        onPress={() => navigation.navigate("UserHome")}
       />
     </Container>
   );

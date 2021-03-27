@@ -11,11 +11,13 @@ import { SafeAreaProvider } from "react-native-safe-area-context";
 //Navidation
 import { NavigationContainer } from "@react-navigation/native";
 import { createStackNavigator } from "@react-navigation/stack";
+
+
 // import { SearchBar} from "react-native-elements";
 import SignInScreen from "./src/screens/signIn";
-import SignUpScreen from "./src/screens/signUp"
-import HomeScreen from "./src//screens/Home"
-
+import SignUpScreen from "./src/screens/signUp";
+import HomeScreen from "./src/screens/Home";
+import UserHomeScreen from "./src/screens/UserHome"
 
 const Stack = createStackNavigator();
 export default function App() {
@@ -38,13 +40,44 @@ export default function App() {
     <NavigationContainer>
       <SafeAreaProvider>
         <View style={styles.container}>
-          {/* <Container>
-            <SignInScreen />
-          </Container> */}
-          <Stack.Navigator initialRouteName="Home">
-            <Stack.Screen name="Home" component={HomeScreen} />
+          <Stack.Navigator
+            initialRouteName="Home"
+            screenOptions={{
+              headerStyle: {
+                backgroundColor: "#F2871E",
+              },
+              headerTintColor: "#fff",
+              headerTitleStyle: {
+                fontWeight: "bold",
+              },
+            }}
+          >
+            <Stack.Screen
+              name="Home"
+              component={HomeScreen}
+              options={{
+                title: "Panda home",
+                // headerStyle: {
+                //   backgroundColor: "#f4511e",
+                // },
+                // headerTintColor: "#fff",
+                // headerTitleStyle: {
+                //   fontWeight: "bold",
+                // },
+
+                //Adding button to the header
+                headerRight: () => (
+                  <Button
+                    onPress={() => alert("This is a button!")}
+                    title="Info"
+                    color="#fff"
+                  />
+                ),
+              }}
+            />
             <Stack.Screen name="SignIn" component={SignInScreen} />
             <Stack.Screen name="SignUp" component={SignUpScreen} />
+            <Stack.Screen name="UserHome" component={UserHomeScreen} />
           </Stack.Navigator>
         </View>
       </SafeAreaProvider>

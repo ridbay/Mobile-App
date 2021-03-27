@@ -1,0 +1,6 @@
+Navigation: https://reactnavigation.org/docs/nesting-navigators
+EXPo SDKs: https://docs.expo.io/versions/v40.0.0/sdk/screens/
+Native Base: https://docs.nativebase.io/Components.html#Drawer
+React Native Element: https://react-native-elements.js.org/#/slider
+Lottie: https://airbnb.io/lottie/#/react-native
+Icons: https://oblador.github.io/react-native-vector-icons/

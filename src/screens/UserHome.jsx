@@ -1,11 +1,11 @@
-import * as React from 'react';
-import { Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import * as React from "react";
+import { Text, View } from "react-native";
+import { NavigationContainer } from "@react-navigation/native";
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 
 function HomeScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>Home!</Text>
     </View>
   );
@@ -13,7 +13,7 @@ function HomeScreen() {
 
 function SettingsScreen() {
   return (
-    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+    <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
       <Text>Settings!</Text>
     </View>
   );
@@ -31,9 +31,5 @@ function MyTabs() {
 }
 
 export default function UserHome() {
-  return (
-    <NavigationContainer>
-      <MyTabs />
-    </NavigationContainer>
-  );
+  return <MyTabs />;
 }

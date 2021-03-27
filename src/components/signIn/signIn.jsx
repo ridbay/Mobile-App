@@ -16,7 +16,7 @@ import HeaderComponent from "../Header";
 const signIn = ({ navigation }) => {
   return (
     <Container>
-      <Header />
+      <HeaderComponent />
       <Content>
         <Avatar
           rounded

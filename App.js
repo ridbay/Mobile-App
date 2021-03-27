@@ -14,19 +14,9 @@ import { createStackNavigator } from "@react-navigation/stack";
 // import { SearchBar} from "react-native-elements";
 import SignInScreen from "./src/screens/signIn";
 import SignUpScreen from "./src/screens/signUp"
+import HomeScreen from "./src//screens/Home"
 
 
-function HomeScreen({ navigation }) {
-  return (
-    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
-      <Text>Home Screen</Text>
-      <Button
-        title="Go to Sign In page"
-        onPress={() => navigation.navigate('SignIn')}
-      />
-    </View>
-  );
-}
 const Stack = createStackNavigator();
 export default function App() {
   const [isReady, setIsReady] = useState(false);

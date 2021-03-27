@@ -1,6 +1,6 @@
 import React from 'react'
 import { View, Text } from 'react-native';
-import SignUp from "../components/signUp/signUp";
+import SignUp from "../components/signUp/SignUp";
 
 const SignUpScreen = ({ navigation }) => {
     return (

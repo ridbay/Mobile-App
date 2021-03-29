@@ -2,11 +2,13 @@
   "name": "pandar",
   "displayName": "pandar",
   "expo": {
-    "name": "pandar",
-    "slug": "pandar",
+    "name": "pandar-app",
+    "slug": "pandar-app",
     "version": "1.0.0",
     "assetBundlePatterns": [
       "**/*"
-    ]
+    ],
+    "description": "",
+    "githubUrl": "https://github.com/ridbay/Mobile-App"
   }
 }

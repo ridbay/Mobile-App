@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import {
   Container,
   // Header,
@@ -9,44 +9,46 @@ import {
   Label,
 } from "native-base";
 import { Avatar } from "react-native-elements";
-import { Button, StyleSheet, Image } from "react-native";
-const logo = require("../../images/pandar_logo-orange.png");
+import { Button, StyleSheet, Image, View, TextInput, Text } from "react-native";
+const Logo = require("../../assets/pandar_logo-orange.png");
 import HeaderComponent from "../Header";
 
 const signIn = ({ navigation }) => {
+  const [email, onChangeEmail] = useState("");
+  const [password, onChangePassword] = useState("");
+
+  const onPressSignUp = () => {
+    navigation.navigate("SignUp")
+  };
   return (
-    <Container>
+    <View>
       <HeaderComponent />
-      <Content>
-        <Avatar
-          rounded
-          title="MD"
-          source={{
-            uri: `${logo}`,
-          }}
-          style={styles.avatar}
+      <View style={styles.containers}>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangeEmail}
+          value={email}
+          placeholder="Email Address"
+          textContentType="emailAddress"
         />
-        <Image style={styles.avatar} source={logo} />
-        <Form>
-          <Item floatingLabel>
-            <Label>Username</Label>
-            <Input />
-          </Item>
-          <Item floatingLabel last>
-            <Label>Password</Label>
-            <Input />
-          </Item>
-        </Form>
-      </Content>
-      <Button
-        title="Go to User Home Page"
-        onPress={() => navigation.navigate("UserHome")}
-      />
-    </Container>
+        <TextInput
+          style={styles.input}
+          onChangeText={onChangePassword}
+          value={password}
+          placeholder="Password"
+          secureTextEntry
+          textContentType="password"
+        />
+      </View>
+      
+      <Button title="Sign In" onPress={() => navigation.navigate("UserHome")} />
+      <Text>Not you? Switch Account</Text>
+      <Text style={styles.signuptext}>Don't have an account yet? <Text onPress={onPressSignUp}>Sign Up</Text> </Text>
+    </View>
   );
 };
 const styles = StyleSheet.create({
-  avatar: {
+  container: {
     flex: 1,
     // backgroundColor: "#fff",
     justifyContent: "center",
@@ -54,5 +56,14 @@ const styles = StyleSheet.create({
     width: 30,
     height: 40,
   },
+  input: {
+    height: 40,
+    margin: 12,
+    borderWidth: 1,
+  },
+  signuptext: {
+    fontSize: 20,
+    fontWeight: "bold"
+  }
 });
 export default signIn;

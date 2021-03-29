@@ -1,5 +1,5 @@
 import React from "react";
-import { Image, Button, View, Text, StyleSheet } from "react-native";
+import { ActivityIndicator, Image, Button, View, Text, StyleSheet } from "react-native";
 import Header from "../components/Header";
 import Logo from "../assets/pandar_logo-orange.png";
 const styles = StyleSheet.create({
@@ -27,6 +27,7 @@ const HomeScreen = ({ navigation }) => {
             uri: `${Logo}`,
           }}
         />
+        <ActivityIndicator size="large" color="#00ff00" />
         <Text>Welcome to Panda</Text>
         <Button
           title="Go to Sign In page"
